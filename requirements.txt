@@ -1,3 +1,4 @@
 pandas==1.2.4
 numpy==1.20.3
 streamlit==0.82.0
+cx-Oracle==8.2.0
