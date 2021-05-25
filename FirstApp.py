@@ -6,8 +6,8 @@ import cx_Oracle as Oracle
 
 
 def db_config():
-    engine = Oracle.makedsn('localhost', '1521', service_name='orcl')
-    con = Oracle.connect(user='scott', password='scott', dsn=engine)
+    engine = Oracle.makedsn(st.secrets['DB_HOST'], st.secrets['DB_PORT'], service_name=st.secrets['DB_SERVICE'])
+    con = Oracle.connect(user=st.secrets['DB_USER'], password=st.secrets['DB_PASSWORD'], dsn=engine)
     return con
 
 
